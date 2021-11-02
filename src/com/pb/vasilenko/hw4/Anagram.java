@@ -2,6 +2,7 @@ package com.pb.vasilenko.hw4;
 
 import java.util.Scanner;
 
+
 public class Anagram {
     public static void main(String[] args){
 
@@ -106,3 +107,139 @@ public class Anagram {
     }
 
 }
+
+//Из лекции
+/*
+//*******************************
+
+public class Person{
+    private final String name;
+
+    public Person (String name){
+        this.name = name;
+    }
+
+    public String пуеТфьу(){
+        return name;
+    }
+}
+
+
+public class Phone {
+
+    private String number;
+    public String model;
+    public Float weight;
+    private int indicator;
+
+    //Конструктор
+    public Phone(String number, String model, float weight) {
+
+        this(number, model);  //Вызов кнструткора из другого конструктора
+
+        this.weight = weight;
+        if (weight > 0) {
+            this.weight = weight;
+        }
+
+    }
+
+    //Конструктор
+    public Phone(String number, String model) {
+        this.number = number;
+        this.model = model;
+
+    }
+
+    //Конструктор
+    public Phone() {
+        this.number = "0";
+        this.model = "x";
+
+    }
+
+    String getInfo() {
+        return "[модель: " + model + ", номер: " + number + "]";
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    private boolean isCharger() {
+        return indicator > 0;
+    }
+
+    public void reciveCall(String Number) {
+        System.out.println("Звонит" + Number);
+    }
+
+    public void reciveCall(String Number, String  number) {
+        if(isCharger()){
+            System.out.println("Звонит" + Number + "Номер" + number);
+            indicator -= 20;
+        }
+        else {
+            System.out.println("Телефон разраядился");
+        }
+
+    }
+
+
+    public Void sendMassage(String... numbers){
+        System.out.println("Сообщениея отпавляются на номера:");
+
+        for(String number: numbers){
+            System.out.println(numbers);
+        }
+        System.out.println("ОТправлено");
+
+    }
+
+    public void charging(){
+        System.out.println("Телефон" + model + "Заряжается");
+        this.indicator = 100;
+        System.out.println("Заряжен");
+    }
+
+    public void takePhoto (Person person){
+        if(isCharger()){
+            System.out.println();
+        }
+    }
+
+}
+//*******************************
+//*******************************
+
+        Phone phone1 = new Phone("0","0", 2.f);
+        Phone phone2 = new Phone("0","0");
+        Phone phone3 = new Phone();
+
+        phone1.model = "iphone";
+        phone2.model = "pixel";
+
+        System.out.println(phone1.getInfo());
+        System.out.println(phone2.getInfo());
+        System.out.println(phone3.getInfo());
+
+        if(phone1.getNumber() != null){
+
+        }
+
+        phone1.charging();
+
+        phone1.reciveCall("Иванов");
+
+        phone1.sendMassage("1234", "asdf");
+
+        phone1.takePhoto(new Person("Петров ф. И."));
+
+//*******************************
+
+
+ */
